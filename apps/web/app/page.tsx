@@ -1,12 +1,11 @@
-import { Button } from "@workspace/ui/components/button"
+import { StoryList } from "@/components/story-list";
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
+    <div className="container mx-auto p-4 min-h-screen bg-background">
+      <div className="max-w-4xl mx-auto pt-8">
+        <StoryList />
       </div>
     </div>
-  )
+  );
 }

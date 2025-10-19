@@ -204,3 +204,8 @@ vite.config.ts.timestamp-*
 
 .cursorignore
 .cursorindexingignore
+
+# Docs
+docs/
+STORY_FEATURE.md
+SWIPE_FEATURE.md

@@ -125,3 +125,53 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* Story ring indicator */
+  .story-ring {
+    position: relative;
+  }
+  
+  .story-ring::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #8b5cf6, #ec4899, #f59e0b);
+    z-index: -1;
+  }
+  
+  /* Story viewer animations */
+  .story-fade-in {
+    animation: storyFadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes storyFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Custom scrollbar for story list */
+  .story-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .story-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .story-scroll::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 2px;
+  }
+  
+  .story-scroll::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+  }
+}
